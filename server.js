@@ -10,17 +10,17 @@ const app = express();
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "*"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000", "*"],
+//   })
+// );
 app.use("/api/tasks", router);
 
 //routes
-app.get("/", (req, res) => {
-  res.send("Home Page");
-});
+// app.get("/", (req, res) => {
+//   res.send("Home Page");
+// });
 
 const PORT = process.env.PORT || 5000;
 
